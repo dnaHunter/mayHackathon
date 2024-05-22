@@ -17,6 +17,7 @@ body {
     display: flex;
     gap: 2rem;
     margin: 0;
+    border-bottom: 2px solid $gold;
 
     &__title,
     &__link{

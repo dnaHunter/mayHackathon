@@ -13,6 +13,7 @@ body {
   display: flex;
   gap: 2rem;
   margin: 0;
+  border-bottom: 2px solid #c9ae00;
 }
 .nav__title, .nav__link {
   color: white;
