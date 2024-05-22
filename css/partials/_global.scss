@@ -1,0 +1,30 @@
+@use "./variables" as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+    
+body {
+    margin: 0;
+    font-family: fantasy, Helvetica, sans-serif;
+
+}
+
+.nav{
+    padding: .5rem 1rem;
+    background-color: $DNDRed;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+
+    &__title,
+    &__link{
+        color: white;
+        text-decoration: none;
+    }
+
+    &__title {
+        font-family:Impact;
+    }
+}

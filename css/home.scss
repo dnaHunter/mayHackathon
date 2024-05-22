@@ -1,0 +1,46 @@
+@use "./partials/global";
+@use "./partials/variables" as *;
+
+
+.intro {
+    padding: 1rem 1rem;
+    margin: 0;
+    background-color: $lightBlack;
+    color: white;
+}
+
+.classes{
+    padding: 0 1rem;
+    background-color: azure;
+
+    &__title{
+
+    }
+
+    &__linkContainer{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__classContainer{
+        background-color: $DNDLightRed;
+        display: flex;
+        align-items: center;
+        width:10rem;
+        text-decoration:none;
+        border: 1px solid black;
+        border-radius: 4px;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.52);
+        padding: 0 .5rem;
+    }
+
+    &__logo{
+        height:2.5rem
+    }
+    &__name{
+        color: black;
+        
+    }
+}

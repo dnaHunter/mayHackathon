@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DnDnD</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="./css/home.css" />
     <script type="module" src="./scripts/index.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="./index.html" class="nav__title">DnDnD</a>
+      <a href="" class="nav__link">Classes</a>
+    </nav>
+
+    <section class="intro">
+      <h1 class="intro__title">DnDnDocumentation</h1>
+      <p class="intro__tagline">
+        Your one stop stop shop for all your Dungeons and Dragons information
+      </p>
+    </section>
+
+    <section class="classes">
+      <h2 class="classes__title">Classes</h2>
+
+      <div class="classes__linkContainer">
+        <a class="classes__classContainer" href="./pages/cleric.html">
+          <img
+            src="./assests/logos/Class Icon - Cleric.svg"
+            alt="A mace surrounded byholy light"
+            class="classes__logo"
+          />
+          <p class="classes__name">Cleric</p>
+        </a>
+
+        <a class="classes__classContainer" href="./pages/cleric.html">
+          <img
+            src="./assests/logos/Class Icon - Bard.svg"
+            alt="A lute"
+            class="classes__logo"
+          />
+          <p class="classes__name">Bard</p>
+        </a>
+
+        <a class="classes__classContainer" href="./pages/cleric.html">
+            <img
+              src="./assests/logos/Class Icon - Druid.svg"
+              alt="A lute"
+              class="classes__logo"
+            />
+            <p class="classes__name">Druid</p>
+          </a>
+
+          <a class="classes__classContainer" href="./pages/cleric.html">
+            <img
+              src="./assests/logos/Class Icon - Fighter.svg"
+              alt="A lute"
+              class="classes__logo"
+            />
+            <p class="classes__name">Fighter</p>
+          </a>
+      </div>
+    </section>
+  </body>
 </html>
