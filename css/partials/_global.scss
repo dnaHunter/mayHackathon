@@ -4,7 +4,7 @@
     box-sizing: border-box;
     }
 
-    
+
 body {
     margin: 0;
     font-family: fantasy, Helvetica, sans-serif;
@@ -26,5 +26,19 @@ body {
 
     &__title {
         font-family:Impact;
+    }
+}
+
+.footer{
+    padding: 0 1rem;
+    margin-top: 1rem;
+    background-color: $DNDRed;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    &__link{ 
+        text-decoration: none;
+        color: white;
     }
 }

@@ -1,9 +1,28 @@
 @use "./partials/global";
+@use "./partials/mixins" as *;
 
-.title{
-    padding:0 1rem;
-}
 
 .features{
     padding:0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        align-items: flex-start;
+    }
+
+    &__imgHandler{
+        @include tablet{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+    }
+
+    &__img{
+        object-fit: contain;
+    }
 }

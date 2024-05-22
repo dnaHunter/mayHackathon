@@ -4,8 +4,15 @@ import createClassElement from "./createClassElement.js";
 function renderClassInfo(classinfo) {
   const className = classinfo.name;
 
-  const sectionEl = document.querySelector(".features");
-  const taglineEl = createClassElement("p", "features__tagline", sectionEl);
+  const sectionEl = document.querySelector(".features")
+  
+  const imgHandlerEl = document.querySelector(".features__imgHandler");
+
+  const textHandler = createClassElement("div", "features__textHandler",imgHandlerEl);
+
+  const titleEL = createClassElement("h1", "features__title",textHandler);
+  titleEL.innerText = className + " Class Features";
+  const taglineEl = createClassElement("p", "features__tagline", textHandler);
 
   taglineEl.innerText = "As a " + className + " you get these features:";
 
@@ -13,7 +20,7 @@ function renderClassInfo(classinfo) {
   const hitPointsDivEl = createClassElement(
     "div",
     "features__hitpoints",
-    sectionEl
+    textHandler
   );
   const hitPointsTitleEl = createClassElement(
     "h3",
@@ -56,7 +63,7 @@ function renderClassInfo(classinfo) {
     ") + your constitution modifier";
 
   //PROFICIENCIES
-  const profDivEl = createClassElement("div", "featured__prof", sectionEl);
+  const profDivEl = createClassElement("div", "featured__prof", textHandler);
 
   const profTitleEl = createClassElement("h3", "features__subtitle", profDivEl);
   profTitleEl.innerText = "Proficiencies";
@@ -73,12 +80,40 @@ function renderClassInfo(classinfo) {
     const name = porfElement.name;
 
     if (name.startsWith("Saving")) {
-      saving.push(name);
+        const shortSavingName = name.slice(-3);
+        let longSavingName = "";
+        switch(shortSavingName.toLowerCase()){
+            case "wis":
+                longSavingName = "Wisdom";
+                break;
+            case "cha":
+                longSavingName = "Charisma";
+                break;
+            case "con":
+                longSavingName = "Constitution";
+                break;
+            case "dex":
+                longSavingName = "Dexterity"
+                break;
+            case "str":
+                longSavingName = "Strength"
+                break;
+            case "int":
+                longSavingName = "Intelligence"
+                break;
+            
+        }
+
+      saving.push(longSavingName);
     } else {
       const El = createClassElement("li", "features__listEl", ulEl);
       El.innerText = name;
     }
   }
+
+  const savingEl = createClassElement("p", "features__text", profDivEl);
+  savingEl.innerText = className + "'s are proficient in " + saving[0] + " and " + saving[1] + " saving throws"
+
 }
 
 const api = new DnDaApi();
