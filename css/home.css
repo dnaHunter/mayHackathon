@@ -30,8 +30,9 @@ body {
 }
 
 .classes {
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   background-color: azure;
+  padding-bottom: 5rem;
 }
 .classes__linkContainer {
   display: flex;
@@ -55,4 +56,17 @@ body {
 }
 .classes__name {
   color: black;
+}
+
+.footer {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  background-color: #7d0006;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=home.css.map */

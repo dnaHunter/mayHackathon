@@ -10,8 +10,9 @@
 }
 
 .classes{
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     background-color: azure;
+    padding-bottom: 5rem;
 
     &__title{
 
@@ -42,5 +43,19 @@
     &__name{
         color: black;
         
+    }
+}
+
+.footer{
+    padding: 0 1rem;
+    margin-top: 1rem;
+    background-color: $DNDRed;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    &__link{ 
+        text-decoration: none;
+        color: white;
     }
 }
